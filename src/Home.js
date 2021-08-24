@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <h1>Music Memory Game</h1>
+      <h1>Music Memory Game!</h1>
       <h2>
         <a href="/game">Enter the game</a>
       </h2>
