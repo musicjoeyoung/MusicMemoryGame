@@ -1,0 +1,84 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navbar {
+  background-color: grey;
+  margin-top: 50px;
+}
+.pianoOuterDiv {
+  margin: auto;
+  width: 50%;
+}
+.pianoPage {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.piano {
+  box-shadow: 4px 3px 8px 1px #5e5a5d;
+  -webkit-box-shadow: 4px 3px 8px 1px #5e5a5d;
+}
+.piano:hover {
+  cursor: pointer;
+}
+.white-key {
+  border-style: outset;
+  width: 34px;
+  height: 72px;
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  font-size: 12px;
+  text-align: center;
+}
+.white-key:hover {
+  background-color: rgba(167, 167, 167, 0.726);
+}
+.white-key:active {
+  background-color: yellow;
+}
+#whiteNoteName {
+  top: 42px;
+  position: relative;
+  font-size: inherit;
+}
+.black-key {
+  width: 26px;
+  height: 42px;
+  background-color: black;
+  margin-left: -14.5px;
+  margin-right: -14.5px;
+  z-index: 2;
+  border-radius: 4px;
+  color: white;
+  font-size: inherit;
+  text-align: center;
+}
+.black-key:hover {
+  background-color: rgb(80, 80, 80);
+}
