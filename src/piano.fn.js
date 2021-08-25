@@ -17,6 +17,45 @@ export function playNote(note) {
   });
   console.log(note);
 }
+export function melody1() {
+  const piano = new Tone.Sampler({
+    urls: {
+      C4: "C4.mp3",
+      "D#4": "Ds4.mp3",
+      "F#4": "Fs4.mp3",
+      A4: "A4.mp3",
+    },
+    release: 1,
+    baseUrl: "https://tonejs.github.io/audio/salamander/",
+  }).toDestination();
+  const now = Tone.now();
+  Tone.loaded().then(() => {
+    keyE3Yellow();
+    piano.triggerAttack("E3", now); //use this number to add a sustain option
+    setTimeout(function () {
+      keyE3White();
+    }, 1000);
+
+    setTimeout(function () {
+      keyD3Yellow();
+    }, 1000);
+    piano.triggerAttack("D3", now + 1);
+    setTimeout(function () {
+      keyD3White();
+    }, 2000);
+
+    setTimeout(function () {
+      keyC3Yellow();
+    }, 2000);
+    piano.triggerAttack("C3", now + 2);
+    setTimeout(function () {
+      keyC3White();
+    }, 3000);
+
+    piano.triggerRelease(["E3", "D3", "C3"], now + 4);
+  });
+  //console.log(note);
+}
 export function keyE3Yellow() {
   const E3 = document.getElementById("E3");
   E3.style.backgroundColor = "yellow";

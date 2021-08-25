@@ -3,6 +3,7 @@ import * as alertify from "alertifyjs";
 import "alertifyjs/build/css/alertify.css";
 import classnames from "classnames";
 
+import { melody1 } from "./piano.fn";
 import {
   /* playTune, */
   playNote as pianoPlayNote,
@@ -70,12 +71,6 @@ const Piano = () => {
     if (note) {
       playNote(note);
     }
-    /*if (Object.keys(keyCodeNumbers).includes(event.keyCode)) {
-      playNote(keyCodeNumbers[event.keyCode]);
-    }*/
-    /*if (event.keyCode === Object.keys(keyCodeNumbers)) {
-      playNote(Object.values(keyCodeNumbers));
-    }*/
   }
   const getNote = (noteOrEvent) => {
     let note = noteOrEvent;
@@ -104,17 +99,10 @@ const Piano = () => {
 
   const notes = [];
 
-  /*   if (document.getElementById("song").value === "maryhadalittlelamb") {
-    startTutorial();
-  }
-  if (document.getElementById("song").value === "twinkletwinkle") {
-    startTutorial();
-  } */
-
   function startTutorial() {
     console.log("start tutorial click = ", clickStart);
     clickStart = true;
-    keyE3Yellow();
+    //keyE3Yellow();
     notes.length = 0;
   }
   function stopTutorial() {
@@ -126,36 +114,26 @@ const Piano = () => {
     notes.length = 0;
     clickStart = false;
   }
-  /*   .white-key:hover {
-  background-color: rgba(167, 167, 167, 0.726);
-}
-.white-key:active {
-  background-color: yellow;
-} */
 
   function keepTrack(note) {
     const lastNoteIndex = notes.length - 1;
-    const correctNote = maryHadALittleLamb[lastNoteIndex];
+    const correctNote = melody1notes[lastNoteIndex];
 
     if (!clickStart) return;
 
     if (note === correctNote) {
-      /*  if (error) {
-        setError(null);
-      } */
-
-      const lastNote = lastNoteIndex === maryHadALittleLamb.length - 1;
+      const lastNote = lastNoteIndex === melody1notes.length - 1;
 
       if (lastNote) {
         return setCongratulations("Well done!") && note.length === 0;
       }
 
-      const nextNote = maryHadALittleLamb[lastNoteIndex + 1];
+      const nextNote = melody1notes[lastNoteIndex + 1];
       keyPress[`key${note}White`]();
       keyPress[`key${nextNote}White`]();
-      setTimeout(function () {
+      /*  setTimeout(function () {
         keyPress[`key${nextNote}Yellow`]();
-      }, 200);
+      }, 200); */
     } else {
       // Invalid note! Remove it
       notes.pop();
@@ -172,59 +150,16 @@ const Piano = () => {
       return notification;
     }
   }
-  /*   let twinkleTwinkle = [
-    "C3",
-    "C3",
-    "G3",
-    "G3",
-    "A3",
-    "A3",
-    "G3",
-    "F3",
-    "F3",
-    "E3",
-    "E3",
-    "D3",
-    "D3",
-    "C3",
-    "G3",
-    "G3",
-    "F3",
-    "F3",
-    "E3",
-    "E3",
-    "D3",
-    "G3",
-    "G3",
-    "F3",
-    "F3",
-    "E3",
-    "E3",
-    "D3",
-    "C3",
-    "C3",
-    "G3",
-    "G3",
-    "A3",
-    "A3",
-    "G3",
-    "F3",
-    "F3",
-    "E3",
-    "E3",
-    "D3",
-    "D3",
-    "C3",
-  ]; */
-  let maryHadALittleLamb = [
+
+  let melody1notes = [
     "E3", // true
     "D3", // true
     "C3", // true
-    "D3",
+    /* "D3",
     "E3",
     "E3",
     "E3",
-    "D3",
+   "D3",
     "D3",
     "D3",
     "E3",
@@ -241,7 +176,7 @@ const Piano = () => {
     "D3",
     "E3",
     "D3",
-    "C3",
+    "C3", */
   ];
 
   const keys = [
@@ -257,18 +192,18 @@ const Piano = () => {
     { note: "A2", label: "N", color: "white" },
     { note: "Bb2", label: "J", color: "black" },
     { note: "B2", label: "M", color: "white" },
-    { note: "C3", label: "Q", color: "white", className: "mobile" },
-    { note: "Db3", label: "2", color: "black", className: "mobile" },
-    { note: "D3", label: "W", color: "white", className: "mobile" },
-    { note: "Eb3", label: "3", color: "black", className: "mobile" },
-    { note: "E3", label: "E", color: "white", className: "mobile" },
-    { note: "F3", label: "R", color: "white", className: "mobile" },
-    { note: "Gb3", label: "5", color: "black", className: "mobile" },
-    { note: "G3", label: "T", color: "white", className: "mobile" },
-    { note: "Ab3", label: "6", color: "black", className: "mobile" },
-    { note: "A3", label: "Y", color: "white", className: "mobile" },
-    { note: "Bb3", label: "7", color: "black", className: "mobile" },
-    { note: "B3", label: "U", color: "white", className: "mobile" },
+    { note: "C3", label: "Q", color: "white" },
+    { note: "Db3", label: "2", color: "black" },
+    { note: "D3", label: "W", color: "white" },
+    { note: "Eb3", label: "3", color: "black" },
+    { note: "E3", label: "E", color: "white" },
+    { note: "F3", label: "R", color: "white" },
+    { note: "Gb3", label: "5", color: "black" },
+    { note: "G3", label: "T", color: "white" },
+    { note: "Ab3", label: "6", color: "black" },
+    { note: "A3", label: "Y", color: "white" },
+    { note: "Bb3", label: "7", color: "black" },
+    { note: "B3", label: "U", color: "white" },
     { note: "C4", label: "I", color: "white" },
     { note: "Db4", label: "9", color: "black" },
     { note: "D4", label: "O", color: "white" },
@@ -287,10 +222,6 @@ const Piano = () => {
     <div
       key={`unique${note}`}
       className={classnames(`${color}-key`, className)}
-      /*className={classnames(`${color}-key`, {
-          mobile: className === "mobile",
-          "active": elementIsActive,
-        })}*/
       onClick={playNote}
       id={note}
     >
@@ -305,18 +236,18 @@ const Piano = () => {
   return (
     <div className="pianoOuterDiv">
       {/* <button onClick={playTune}>play</button> */}
-
+      <button onClick={melody1}>melody 1</button>
       <div className="pianoPage">{keyboard}</div>
-      {/*      <button
+      <button
         id="tutorialBtn"
         disabled={clickStart && "true"}
         onClick={startTutorial}
       >
-        Tutorial
-      </button> */}
-      {/*    <button id="tutorialBtn" onClick={stopTutorial}>
-        Create
-      </button> */}
+        Begin Testing Your Memory!
+      </button>
+      <button id="tutorialBtn" onClick={stopTutorial}>
+        End Testing Memory & Just Jam!
+      </button>
       {congratulations}
     </div>
   );
