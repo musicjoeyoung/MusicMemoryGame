@@ -3,7 +3,7 @@ import * as alertify from "alertifyjs";
 import "alertifyjs/build/css/alertify.css";
 import classnames from "classnames";
 
-import { melody1 } from "./piano.fn";
+import { melody2 } from "./piano.fn";
 import {
   playNote as pianoPlayNote,
   keyE3Yellow,
@@ -115,19 +115,19 @@ const Piano = () => {
 
   function keepTrack(note) {
     const lastNoteIndex = notes.length - 1;
-    const correctNote = melody1notes[lastNoteIndex];
+    const correctNote = melody2notes[lastNoteIndex];
 
     if (!clickStart) return;
 
     if (note === correctNote) {
-      const lastNote = lastNoteIndex === melody1notes.length - 1;
+      const lastNote = lastNoteIndex === melody2notes.length - 1;
 
       if (lastNote) {
         const success = alertify.success("YAY!");
         return success && note.length === 0;
       }
 
-      const nextNote = melody1notes[lastNoteIndex + 1];
+      const nextNote = melody2notes[lastNoteIndex + 1];
       keyPress[`key${note}White`]();
       keyPress[`key${nextNote}White`]();
     } else {
@@ -145,7 +145,7 @@ const Piano = () => {
   }
 
   //this will be what is compared against what the user enters
-  let melody1notes = ["E3", "D3", "C3"];
+  let melody2notes = ["E3", "D3", "C3", "Eb3", "B3", "Db4", "G2", "C2"];
 
   const keys = [
     { note: "C2", label: "Z", color: "white" },
@@ -186,7 +186,7 @@ const Piano = () => {
     { note: "B4", label: "", color: "white" },
   ];
 
-  const keyboard = keys.map(({ note, label, color, className }) => (
+  const keyboard2 = keys.map(({ note, label, color, className }) => (
     <div
       key={`unique${note}`}
       className={classnames(`${color}-key`, className)}
@@ -197,8 +197,8 @@ const Piano = () => {
 
   return (
     <div className="pianoOuterDiv">
-      <button onClick={melody1}>melody 1</button>
-      <div className="pianoPage">{keyboard}</div>
+      <button onClick={melody2}>melody 2</button>
+      <div className="pianoPage">{keyboard2}</div>
       <button
         id="tutorialBtn"
         disabled={clickStart && "true"}

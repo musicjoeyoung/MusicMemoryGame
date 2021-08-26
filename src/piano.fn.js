@@ -56,6 +56,80 @@ export function melody1() {
   });
   //console.log(note);
 }
+export function melody2() {
+  const piano = new Tone.Sampler({
+    urls: {
+      C4: "C4.mp3",
+      "D#4": "Ds4.mp3",
+      "F#4": "Fs4.mp3",
+      A4: "A4.mp3",
+    },
+    release: 1,
+    baseUrl: "https://tonejs.github.io/audio/salamander/",
+  }).toDestination();
+  const now = Tone.now();
+  Tone.loaded().then(() => {
+    keyE3Yellow();
+    piano.triggerAttack("E3", now); //use this number to add a sustain option
+    setTimeout(function () {
+      keyE3White();
+    }, 1000);
+
+    setTimeout(function () {
+      keyC3Yellow();
+    }, 1000);
+    piano.triggerAttack("C3", now + 1);
+    setTimeout(function () {
+      keyC3White();
+    }, 2000);
+
+    setTimeout(function () {
+      keyEb3Yellow();
+    }, 2000);
+    piano.triggerAttack("Eb3", now + 2);
+    setTimeout(function () {
+      keyEb3White();
+    }, 3000);
+
+    setTimeout(function () {
+      keyB3Yellow();
+    }, 3000);
+    piano.triggerAttack("B3", now + 3);
+    setTimeout(function () {
+      keyB3White();
+    }, 4000);
+
+    setTimeout(function () {
+      keyDb4Yellow();
+    }, 4000);
+    piano.triggerAttack("Db4", now + 4);
+    setTimeout(function () {
+      keyDb4White();
+    }, 5000);
+
+    setTimeout(function () {
+      keyG2Yellow();
+    }, 5000);
+    piano.triggerAttack("G2", now + 5);
+    setTimeout(function () {
+      keyG2White();
+    }, 6000);
+
+    setTimeout(function () {
+      keyC2Yellow();
+    }, 6000);
+    piano.triggerAttack("C2", now + 6);
+    setTimeout(function () {
+      keyC2White();
+    }, 7000);
+
+    piano.triggerRelease(
+      ["E3", "D3", "C3", "Eb3", "B3", "Db4", "G2", "C2"],
+      now + 8
+    );
+  });
+  //console.log(note);
+}
 export function keyE3Yellow() {
   const E3 = document.getElementById("E3");
   E3.style.backgroundColor = "yellow";
@@ -87,4 +161,48 @@ export function keyG3Yellow() {
 export function keyG3White() {
   const G3 = document.getElementById("G3");
   G3.style.removeProperty("background");
+}
+export function keyC2White() {
+  const C2 = document.getElementById("C2");
+  C2.style.removeProperty("background");
+}
+export function keyC2Yellow() {
+  const C2 = document.getElementById("C2");
+  C2.style.backgroundColor = "yellow";
+}
+export function keyG2Yellow() {
+  const G2 = document.getElementById("G2");
+  G2.style.backgroundColor = "yellow";
+}
+export function keyG2White() {
+  const G2 = document.getElementById("G2");
+  G2.style.backgroundColor = "white";
+}
+export function keyDb4Yellow() {
+  const Db4 = document.getElementById("Db4");
+  Db4.style.backgroundColor = "yellow";
+}
+export function keyDb4White() {
+  const Db4 = document.getElementById("Db4");
+  Db4.style.backgroundColor = "black";
+}
+export function keyEb3Yellow() {
+  const Eb3 = document.getElementById("Eb3");
+  Eb3.style.backgroundColor = "yellow";
+}
+export function keyEb4White() {
+  const Eb4 = document.getElementById("Eb4");
+  Eb4.style.backgroundColor = "black";
+}
+export function keyEb3White() {
+  const Eb3 = document.getElementById("Eb3");
+  Eb3.style.backgroundColor = "black";
+}
+export function keyB3Yellow() {
+  const B3 = document.getElementById("B3");
+  B3.style.backgroundColor = "yellow";
+}
+export function keyB3White() {
+  const B3 = document.getElementById("B3");
+  B3.style.backgroundColor = "white";
 }
