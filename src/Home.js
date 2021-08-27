@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Navbar />
 
-      <a id="enterGame" href="/game">
+      <a id="enterGame" href="/piano">
         <h2>Enter!</h2>
       </a>
 

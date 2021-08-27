@@ -1,8 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
-import Game from "./Game";
+import Piano from "./Piano";
 import PageNotFound from "./PageNotFound";
+import Piano2 from "./Piano2";
 
 function App() {
   return (
@@ -12,8 +13,11 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/game">
-            <Game />
+          <Route exact path="/piano">
+            <Piano />
+          </Route>
+          <Route exact path="/piano2">
+            <Piano2 />
           </Route>
           <Route path="*" component={PageNotFound} />
         </Switch>

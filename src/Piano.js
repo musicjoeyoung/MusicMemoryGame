@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import * as alertify from "alertifyjs";
 import "alertifyjs/build/css/alertify.css";
 import classnames from "classnames";
-
+import { useHistory } from "react-router";
+import Navbar from "./Navbar";
 import { melody1 } from "./piano.fn";
 
 import {
@@ -112,7 +113,10 @@ const Piano = () => {
     notes.length = 0;
     clickStart = false;
   }
-
+  const history = useHistory();
+  function handleClick() {
+    history.push("./piano2");
+  }
   function keepTrack(note) {
     const lastNoteIndex = notes.length - 1;
     const correctNote = melody1notes[lastNoteIndex];
@@ -123,7 +127,13 @@ const Piano = () => {
       const lastNote = lastNoteIndex === melody1notes.length - 1;
 
       if (lastNote) {
-        const success = alertify.success("YAY!");
+        const success =
+          alertify.success("YAY!") &&
+          setTimeout(function () {
+            if (window.confirm("Let's move on to the next one!")) {
+              handleClick();
+            }
+          }, 2000);
         return success && note.length === 0;
       }
 
@@ -133,7 +143,7 @@ const Piano = () => {
     } else {
       notes.pop();
       const notification = alertify.notify(
-        "Oops! Try again. (Also, hire me!)",
+        "Aww, shucks. Wrong note. Try again! You are now obligated to hire me.",
         "error",
         5,
         function () {
@@ -196,22 +206,25 @@ const Piano = () => {
   ));
 
   return (
-    <div className="pianoOuterDiv">
-      <h2>Easy</h2>
-      <button onClick={melody1}>Play Melody</button>
-      <div className="pianoPage">{keyboard}</div>
-      <button
-        id="tutorialBtn"
-        disabled={clickStart && "true"}
-        onClick={startTutorial}
-      >
-        Begin Testing Your Memory!
-      </button>
-      <button id="tutorialBtn" onClick={stopTutorial}>
-        End Testing Memory
-      </button>
-      {congratulations}
-    </div>
+    <>
+      <Navbar />
+      <div className="pianoOuterDiv">
+        <h2>Easy</h2>
+        <button onClick={melody1}>Play Melody</button>
+        <div className="pianoPage">{keyboard}</div>
+        <button
+          id="tutorialBtn"
+          disabled={clickStart && "true"}
+          onClick={startTutorial}
+        >
+          Begin Testing Your Memory!
+        </button>
+        <button id="tutorialBtn" onClick={stopTutorial}>
+          End Testing Memory
+        </button>
+        {congratulations}
+      </div>
+    </>
   );
 };
 

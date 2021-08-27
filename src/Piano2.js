@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as alertify from "alertifyjs";
 import "alertifyjs/build/css/alertify.css";
 import classnames from "classnames";
-
+import Navbar from "./Navbar";
 import { melody2 } from "./piano.fn";
 import {
   playNote as pianoPlayNote,
@@ -216,22 +216,25 @@ const Piano = () => {
   ));
 
   return (
-    <div className="pianoOuterDiv">
-      <h2>Advanced</h2>
-      <button onClick={melody2}>Play Melody</button>
-      <div className="pianoPage">{keyboard2}</div>
-      <button
-        id="tutorialBtn"
-        disabled={clickStart && "true"}
-        onClick={startTutorial}
-      >
-        Begin Testing Your Memory!
-      </button>
-      <button id="tutorialBtn" onClick={stopTutorial}>
-        End Testing Memory
-      </button>
-      {congratulations}
-    </div>
+    <>
+      <Navbar />
+      <div className="pianoOuterDiv">
+        <h2>Advanced</h2>
+        <button onClick={melody2}>Play Melody</button>
+        <div className="pianoPage">{keyboard2}</div>
+        <button
+          id="tutorialBtn"
+          disabled={clickStart && "true"}
+          onClick={startTutorial}
+        >
+          Begin Testing Your Memory!
+        </button>
+        <button id="tutorialBtn" onClick={stopTutorial}>
+          End Testing Memory
+        </button>
+        {congratulations}
+      </div>
+    </>
   );
 };
 
