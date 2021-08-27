@@ -13,7 +13,7 @@ export default function About() {
         <p>
           <span>Created by: </span>Joe Young
         </p>
-        <img id="bioImg" src={joeyoung} />
+        <img id="bioImg" src={joeyoung} alt="headshot of Joe Young" />
         <p>
           <span>Built: </span>During a Mintbean Hackathon
         </p>
@@ -31,9 +31,25 @@ export default function About() {
           user's ability to strengthen their tonal and visual memory.
         </p>
         <p>
+          <span>Goals: </span>Right now there isn't true "win/lose" conditions,
+          but rather "good job/wrong answer" conditions. I plan adding the
+          functionality that keeps track of wrong guesses, apply a limit to them
+          (before the user has to start over), and keep track of how many
+          melodies they got right or wrong.
+          <br />
+          Visually the user will not be able to view the next level of melodies
+          until successfully completing the prior one.
+          <br />A function will be added that will randomly generate melodies as
+          to not have to manually create them and muddy up the code.
+          <br />
+          Users will be able to save their progress and resume their progression
+          at any time.
+        </p>
+        <p>
           <span>Honest Self-Assessment: </span>I had far less time to work on
           this than I would have preferred. With a newborn at home, I was only
-          able to devote about an hour or so each day.
+          able to devote about an hour or so each day, but I think this can be a
+          good and fun idea, so I will continue to bring it to full realization.
         </p>
       </div>
       <div classname="socialMedia">
