@@ -38,16 +38,20 @@ export default function About() {
       </div>
       <div classname="socialMedia">
         <a href="http://www.josephmyoung.com">
-          <img id="socialIcon" src={website} />
+          <img id="socialIcon" src={website} alt="social media icon: website" />
         </a>
         <a href="https://github.com/musicjoeyoung">
-          <img id="socialIcon" src={github} />
+          <img id="socialIcon" src={github} alt="social media icon: github" />
         </a>
         <a href="https://twitter.com/musicjoeyoung">
-          <img id="socialIcon" src={twitter} />
+          <img id="socialIcon" src={twitter} alt="social media icon: twitter" />
         </a>
         <a href="https://www.linkedin.com/in/joseph-m-young/">
-          <img id="socialIcon" src={linkedin} />
+          <img
+            id="socialIcon"
+            src={linkedin}
+            alt="social media icon: linkedin"
+          />
         </a>
       </div>
     </div>
