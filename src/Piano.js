@@ -4,6 +4,7 @@ import "alertifyjs/build/css/alertify.css";
 import classnames from "classnames";
 
 import { melody1 } from "./piano.fn";
+
 import {
   playNote as pianoPlayNote,
   keyE3Yellow,
@@ -100,7 +101,6 @@ const Piano = () => {
   function startTutorial() {
     console.log("start tutorial click = ", clickStart);
     clickStart = true;
-    //keyE3Yellow();
     notes.length = 0;
   }
   function stopTutorial() {
@@ -148,45 +148,45 @@ const Piano = () => {
   let melody1notes = ["E3", "D3", "C3"];
 
   const keys = [
-    { note: "C2", label: "Z", color: "white" },
-    { note: "Db2", label: "S", color: "black" },
-    { note: "D2", label: "X", color: "white" },
-    { note: "Eb2", label: "D", color: "black" },
-    { note: "E2", label: "C", color: "white" },
-    { note: "F2", label: "V", color: "white" },
-    { note: "Gb2", label: "G", color: "black" },
-    { note: "G2", label: "B", color: "white" },
-    { note: "Ab2", label: "H", color: "black" },
-    { note: "A2", label: "N", color: "white" },
-    { note: "Bb2", label: "J", color: "black" },
-    { note: "B2", label: "M", color: "white" },
-    { note: "C3", label: "Q", color: "white" },
-    { note: "Db3", label: "2", color: "black" },
-    { note: "D3", label: "W", color: "white" },
-    { note: "Eb3", label: "3", color: "black" },
-    { note: "E3", label: "E", color: "white" },
-    { note: "F3", label: "R", color: "white" },
-    { note: "Gb3", label: "5", color: "black" },
-    { note: "G3", label: "T", color: "white" },
-    { note: "Ab3", label: "6", color: "black" },
-    { note: "A3", label: "Y", color: "white" },
-    { note: "Bb3", label: "7", color: "black" },
-    { note: "B3", label: "U", color: "white" },
-    { note: "C4", label: "I", color: "white" },
-    { note: "Db4", label: "9", color: "black" },
-    { note: "D4", label: "O", color: "white" },
-    { note: "Eb4", label: "0", color: "black" },
-    { note: "E4", label: "P", color: "white" },
-    { note: "F4", label: "[", color: "white" },
-    { note: "Gb4", label: "=", color: "black" },
-    { note: "G4", label: "]", color: "white" },
-    { note: "Ab4", label: "bk", color: "black" },
-    { note: "A4", label: "/", color: "white" },
-    { note: "Bb4", label: "", color: "black" },
-    { note: "B4", label: "", color: "white" },
+    { note: "C2", color: "white" },
+    { note: "Db2", color: "black" },
+    { note: "D2", color: "white" },
+    { note: "Eb2", color: "black" },
+    { note: "E2", color: "white" },
+    { note: "F2", color: "white" },
+    { note: "Gb2", color: "black" },
+    { note: "G2", color: "white" },
+    { note: "Ab2", color: "black" },
+    { note: "A2", color: "white" },
+    { note: "Bb2", color: "black" },
+    { note: "B2", color: "white" },
+    { note: "C3", color: "white" },
+    { note: "Db3", color: "black" },
+    { note: "D3", color: "white" },
+    { note: "Eb3", color: "black" },
+    { note: "E3", color: "white" },
+    { note: "F3", color: "white" },
+    { note: "Gb3", color: "black" },
+    { note: "G3", color: "white" },
+    { note: "Ab3", color: "black" },
+    { note: "A3", color: "white" },
+    { note: "Bb3", color: "black" },
+    { note: "B3", color: "white" },
+    { note: "C4", color: "white" },
+    { note: "Db4", color: "black" },
+    { note: "D4", color: "white" },
+    { note: "Eb4", color: "black" },
+    { note: "E4", color: "white" },
+    { note: "F4", color: "white" },
+    { note: "Gb4", color: "black" },
+    { note: "G4", color: "white" },
+    { note: "Ab4", color: "black" },
+    { note: "A4", color: "white" },
+    { note: "Bb4", color: "black" },
+    { note: "B4", color: "white" },
   ];
 
-  const keyboard = keys.map(({ note, label, color, className }) => (
+  const keyboard = keys.map(({ note, color, className }) => (
     <div
       key={`unique${note}`}
       className={classnames(`${color}-key`, className)}
@@ -197,7 +197,8 @@ const Piano = () => {
 
   return (
     <div className="pianoOuterDiv">
-      <button onClick={melody1}>melody 1</button>
+      <h2>Easy</h2>
+      <button onClick={melody1}>Play Melody</button>
       <div className="pianoPage">{keyboard}</div>
       <button
         id="tutorialBtn"

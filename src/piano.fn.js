@@ -56,7 +56,7 @@ export function melody1() {
   });
   //console.log(note);
 }
-export function melody2() {
+export function melody2(note) {
   const piano = new Tone.Sampler({
     urls: {
       C4: "C4.mp3",
@@ -123,12 +123,9 @@ export function melody2() {
       keyC2White();
     }, 7000);
 
-    piano.triggerRelease(
-      ["E3", "D3", "C3", "Eb3", "B3", "Db4", "G2", "C2"],
-      now + 8
-    );
+    piano.triggerRelease(["E3", "C3", "Eb3", "B3", "Db4", "G2", "C2"], now + 8);
   });
-  //console.log(note);
+  console.log(note);
 }
 export function keyE3Yellow() {
   const E3 = document.getElementById("E3");

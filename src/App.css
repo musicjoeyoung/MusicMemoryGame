@@ -25,18 +25,18 @@
 }
 
 .navbar {
-  background-color: grey;
-  margin-top: 50px;
+  border: 1px solid;
 }
 .pianoOuterDiv {
   margin: auto;
   width: 50%;
+  padding-top: 5%;
 }
 .pianoPage {
   display: flex;
   margin: auto;
   width: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
 }
 
 .piano {
@@ -84,4 +84,46 @@
 }
 .black-key:active {
   background-color: yellow;
+}
+#socialIcon {
+  width: 5%;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+.about {
+  width: 75%;
+  margin: auto;
+  background-color: gold;
+  border: 1px solid black;
+  border-radius: 47px;
+}
+.aboutText {
+  width: 70%;
+  margin: auto;
+}
+.instructions {
+  width: 90%;
+  margin: auto;
+  background-color: silver;
+  border: 1px solid black;
+  border-radius: 47px;
+  margin-bottom: 7%;
+}
+.instructionText {
+  width: 70%;
+  margin: auto;
+}
+span {
+  font-weight: bold;
+}
+#bioImg {
+  border-radius: 200px;
+  width: 23%;
+}
+button {
+  margin-bottom: 2%;
+}
+#title,
+#enterGame {
+  text-decoration: none;
 }
