@@ -49,48 +49,6 @@ const keyPress = {
 /* let click = 0; */
 const Piano = () => {
   const [congratulations] = useState(null);
-  const keyCodeNumbers = {
-    90: "C2",
-    88: "D2",
-    68: "Eb2",
-    67: "E2",
-    86: "F2",
-    71: "Gb2",
-    66: "G2",
-    72: "Ab2",
-    78: "A2",
-    74: "Bb2",
-    77: "B2",
-    81: "C3",
-    50: "Db3",
-    87: "D3",
-    51: "Eb3",
-    69: "E3",
-    82: "F3",
-    53: "Gb3",
-    84: "G3",
-    54: "Ab3",
-    89: "A3",
-    55: "Bb3",
-    85: "B3",
-    73: "C4",
-    57: "Db4",
-    79: "D4",
-    48: "Eb4",
-    80: "E4",
-    219: "F4",
-    187: "Gb4",
-    221: "G4",
-    8: "Ab4",
-    220: "A4",
-  };
-  window.addEventListener("keydown", key);
-  function key(event) {
-    const note = keyCodeNumbers[event.keyCode];
-    if (note) {
-      playNote(note);
-    }
-  }
   const getNote = (noteOrEvent) => {
     let note = noteOrEvent;
 
@@ -126,10 +84,6 @@ const Piano = () => {
   }
   function stopTutorial() {
     console.log("stop");
-    keyC3White();
-    keyD3White();
-    keyE3White();
-    keyG3White();
     notes.length = 0;
     clickStart = false;
   }

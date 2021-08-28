@@ -3,7 +3,7 @@ import React from "react";
 export default function Instructions() {
   return (
     <div className="instructions">
-      <h2>Instructions</h2>
+      <h2 id="instructionsTitle">Instructions</h2>
       <div className="instructionText">
         <p>
           <span>Goal: </span>The goal is to get playback, from memory, the

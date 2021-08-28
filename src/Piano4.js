@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import * as alertify from "alertifyjs";
 import "alertifyjs/build/css/alertify.css";
 import classnames from "classnames";
-import { useHistory } from "react-router";
 import Navbar from "./Navbar";
-import { melody1 } from "./piano.fn";
-
+import { useHistory } from "react-router";
+import { melody4 } from "./piano.fn";
 import {
   playNote as pianoPlayNote,
   keyE3Yellow,
@@ -16,6 +15,27 @@ import {
   keyC3White,
   keyG3Yellow,
   keyG3White,
+  keyC2White,
+  keyC2Yellow,
+  keyG2Yellow,
+  keyG2White,
+  keyDb4White,
+  keyEb3Yellow,
+  keyEb4White,
+  keyEb3White,
+  keyB3Yellow,
+  keyB3White,
+  keyA3Yellow,
+  keyA3White,
+  keyDb2Yellow,
+  keyDb2White,
+  keyF4Yellow,
+  keyF4White,
+  keyAb2Yellow,
+  keyAb2White,
+  keyC4Yellow,
+  keyC4White,
+  keyDb4Yellow,
 } from "./piano.fn";
 const keyPress = {
   keyE3Yellow,
@@ -26,11 +46,31 @@ const keyPress = {
   keyC3White,
   keyG3Yellow,
   keyG3White,
+  keyC2White,
+  keyC2Yellow,
+  keyG2Yellow,
+  keyG2White,
+  keyDb4White,
+  keyEb3Yellow,
+  keyEb4White,
+  keyEb3White,
+  keyB3Yellow,
+  keyB3White,
+  keyA3Yellow,
+  keyA3White,
+  keyDb2Yellow,
+  keyDb2White,
+  keyF4Yellow,
+  keyF4White,
+  keyAb2Yellow,
+  keyAb2White,
+  keyC4Yellow,
+  keyC4White,
+  keyDb4Yellow,
 };
 /* let click = 0; */
 const Piano = () => {
   const [congratulations] = useState(null);
-
   const getNote = (noteOrEvent) => {
     let note = noteOrEvent;
 
@@ -53,7 +93,10 @@ const Piano = () => {
     keepTrack(note);
     console.log("Played notes", notes);
   };
-
+  const history = useHistory();
+  function handleClick() {
+    history.push("./youwin");
+  }
   let clickStart = false;
 
   const notes = [];
@@ -61,6 +104,7 @@ const Piano = () => {
   function startTutorial() {
     console.log("start tutorial click = ", clickStart);
     clickStart = true;
+    //keyE3Yellow();
     notes.length = 0;
   }
   function stopTutorial() {
@@ -72,37 +116,36 @@ const Piano = () => {
     notes.length = 0;
     clickStart = false;
   }
-  const history = useHistory();
-  function handleClick() {
-    history.push("./piano2");
-  }
+
   function keepTrack(note) {
     const lastNoteIndex = notes.length - 1;
-    const correctNote = melody1notes[lastNoteIndex];
+    const correctNote = melody4notes[lastNoteIndex];
 
     if (!clickStart) return;
 
     if (note === correctNote) {
-      const lastNote = lastNoteIndex === melody1notes.length - 1;
+      const lastNote = lastNoteIndex === melody4notes.length - 1;
 
       if (lastNote) {
         const success =
-          alertify.success("YAY!") &&
+          alertify.success(
+            "YOU WIN! If you made it this far, you may hire me."
+          ) &&
           setTimeout(function () {
-            if (window.confirm("Let's move on to the next one!")) {
+            if (window.confirm("I'm so impressed!")) {
               handleClick();
             }
-          }, 2000);
+          }, 1500);
         return success && note.length === 0;
       }
 
-      const nextNote = melody1notes[lastNoteIndex + 1];
+      const nextNote = melody4notes[lastNoteIndex + 1];
       keyPress[`key${note}White`]();
       keyPress[`key${nextNote}White`]();
     } else {
       notes.pop();
       const notification = alertify.notify(
-        "Aww, shucks. Wrong note. Try again! You are now obligated to hire me.",
+        "Oops! Try again. (Also, hire me!)",
         "error",
         5,
         function () {
@@ -114,7 +157,22 @@ const Piano = () => {
   }
 
   //this will be what is compared against what the user enters
-  let melody1notes = ["E3", "D3", "C3"];
+  let melody4notes = [
+    "A3",
+    "Db2",
+    "F4",
+    "Db4",
+    "G2",
+    "C2",
+    "E3",
+    "C3",
+    "B3",
+    "Db4",
+    "G2",
+    "Db4",
+    "Ab2",
+    "C4",
+  ];
 
   const keys = [
     { note: "C2", color: "white" },
@@ -155,7 +213,7 @@ const Piano = () => {
     { note: "B4", color: "white" },
   ];
 
-  const keyboard = keys.map(({ note, color, className }) => (
+  const keyboard2 = keys.map(({ note, color, className }) => (
     <div
       key={`unique${note}`}
       className={classnames(`${color}-key`, className)}
@@ -168,9 +226,9 @@ const Piano = () => {
     <>
       <Navbar />
       <div className="pianoOuterDiv">
-        <h2>Easy</h2>
-        <button onClick={melody1}>Play Melody</button>
-        <div className="pianoPage">{keyboard}</div>
+        <h2>Expert - Final Boss!</h2>
+        <button onClick={melody4}>Play Melody</button>
+        <div className="pianoPage">{keyboard2}</div>
         <button
           id="tutorialBtn"
           disabled={clickStart && "true"}

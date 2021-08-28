@@ -52,7 +52,7 @@ export default function About() {
           good and fun idea, so I will continue to bring it to full realization.
         </p>
       </div>
-      <div classname="socialMedia">
+      <div className="socialMedia">
         <a href="http://www.josephmyoung.com">
           <img id="socialIcon" src={website} alt="social media icon: website" />
         </a>

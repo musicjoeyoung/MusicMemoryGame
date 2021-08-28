@@ -5,6 +5,8 @@ import Piano from "./Piano";
 import PageNotFound from "./PageNotFound";
 import Piano2 from "./Piano2";
 import Piano3 from "./Piano3";
+import Piano4 from "./Piano4";
+import YouWin from "./YouWin";
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
           </Route>
           <Route exact path="/piano3">
             <Piano3 />
+          </Route>
+          <Route exact path="/piano4">
+            <Piano4 />
+          </Route>
+          <Route exact path="/youwin">
+            <YouWin />
           </Route>
           <Route path="*" component={PageNotFound} />
         </Switch>

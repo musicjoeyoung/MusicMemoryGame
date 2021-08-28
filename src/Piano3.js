@@ -3,6 +3,7 @@ import * as alertify from "alertifyjs";
 import "alertifyjs/build/css/alertify.css";
 import classnames from "classnames";
 import Navbar from "./Navbar";
+import { useHistory } from "react-router";
 import { melody3 } from "./piano.fn";
 import {
   playNote as pianoPlayNote,
@@ -48,48 +49,6 @@ const keyPress = {
 /* let click = 0; */
 const Piano = () => {
   const [congratulations] = useState(null);
-  const keyCodeNumbers = {
-    90: "C2",
-    88: "D2",
-    68: "Eb2",
-    67: "E2",
-    86: "F2",
-    71: "Gb2",
-    66: "G2",
-    72: "Ab2",
-    78: "A2",
-    74: "Bb2",
-    77: "B2",
-    81: "C3",
-    50: "Db3",
-    87: "D3",
-    51: "Eb3",
-    69: "E3",
-    82: "F3",
-    53: "Gb3",
-    84: "G3",
-    54: "Ab3",
-    89: "A3",
-    55: "Bb3",
-    85: "B3",
-    73: "C4",
-    57: "Db4",
-    79: "D4",
-    48: "Eb4",
-    80: "E4",
-    219: "F4",
-    187: "Gb4",
-    221: "G4",
-    8: "Ab4",
-    220: "A4",
-  };
-  window.addEventListener("keydown", key);
-  function key(event) {
-    const note = keyCodeNumbers[event.keyCode];
-    if (note) {
-      playNote(note);
-    }
-  }
   const getNote = (noteOrEvent) => {
     let note = noteOrEvent;
 
@@ -132,7 +91,10 @@ const Piano = () => {
     notes.length = 0;
     clickStart = false;
   }
-
+  const history = useHistory();
+  function handleClick() {
+    history.push("./piano4");
+  }
   function keepTrack(note) {
     const lastNoteIndex = notes.length - 1;
     const correctNote = melody3notes[lastNoteIndex];
@@ -143,7 +105,13 @@ const Piano = () => {
       const lastNote = lastNoteIndex === melody3notes.length - 1;
 
       if (lastNote) {
-        const success = alertify.success("YAY!");
+        const success =
+          alertify.success("YAY!") &&
+          setTimeout(function () {
+            if (window.confirm("Let's move on to the next one!")) {
+              handleClick();
+            }
+          }, 2000);
         return success && note.length === 0;
       }
 
