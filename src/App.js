@@ -4,6 +4,7 @@ import Home from "./Home";
 import Piano from "./Piano";
 import PageNotFound from "./PageNotFound";
 import Piano2 from "./Piano2";
+import Piano3 from "./Piano3";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route exact path="/piano2">
             <Piano2 />
+          </Route>
+          <Route exact path="/piano3">
+            <Piano3 />
           </Route>
           <Route path="*" component={PageNotFound} />
         </Switch>

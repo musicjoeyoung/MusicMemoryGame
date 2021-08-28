@@ -3,6 +3,7 @@ import * as alertify from "alertifyjs";
 import "alertifyjs/build/css/alertify.css";
 import classnames from "classnames";
 import Navbar from "./Navbar";
+import { useHistory } from "react-router";
 import { melody2 } from "./piano.fn";
 import {
   playNote as pianoPlayNote,
@@ -132,7 +133,10 @@ const Piano = () => {
     notes.length = 0;
     clickStart = false;
   }
-
+  const history = useHistory();
+  function handleClick() {
+    history.push("./piano3");
+  }
   function keepTrack(note) {
     const lastNoteIndex = notes.length - 1;
     const correctNote = melody2notes[lastNoteIndex];
@@ -143,7 +147,13 @@ const Piano = () => {
       const lastNote = lastNoteIndex === melody2notes.length - 1;
 
       if (lastNote) {
-        const success = alertify.success("YAY!");
+        const success =
+          alertify.success("YAY!") &&
+          setTimeout(function () {
+            if (window.confirm("Let's move on to the next one!")) {
+              handleClick();
+            }
+          }, 2000);
         return success && note.length === 0;
       }
 
