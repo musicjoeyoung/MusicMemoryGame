@@ -228,3 +228,7 @@ button {
   display: none;
   width: 100%;
 }
+#goal,
+#howToPlay {
+  text-align: left;
+}
