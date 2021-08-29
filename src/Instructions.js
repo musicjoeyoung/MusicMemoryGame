@@ -21,13 +21,16 @@ export default function Instructions() {
           melody correctly, good job: try a more difficult melody!
         </p>
         <br />
-        When you're finished entering the melody, just click "End Testing
-        Memory"
+        When you're finished entering the melody, just click "Reset"
         <p>
           **Rhythm does not matter. If a melody has rhythm(s) in it when you
           listen to it, you do not need to replicate that rhythm to get the
           correct answer. You only need to playback the correct notes in correct
           order.
+        </p>
+        <p>
+          ***At the moment, this game is best visualized with a minimum window
+          width of 900px.
         </p>
       </div>
     </div>

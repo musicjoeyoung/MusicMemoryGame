@@ -246,7 +246,7 @@ const Piano = () => {
           Begin Testing Your Memory!
         </button>
         <button id="tutorialBtn" onClick={stopTutorial}>
-          End Testing Memory
+          Reset
         </button>
         <button onClick={showHint}>Need a hint?</button>
 
