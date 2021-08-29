@@ -5,6 +5,7 @@ import classnames from "classnames";
 import Navbar from "./Navbar";
 import { useHistory } from "react-router";
 import { melody4 } from "./piano.fn";
+import hint from "./images/piano4hint.png";
 import {
   playNote as pianoPlayNote,
   keyE3Yellow,
@@ -222,6 +223,14 @@ const Piano = () => {
     ></div>
   ));
 
+  function showHint() {
+    let x = document.getElementById("hintImg");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
   return (
     <>
       <Navbar />
@@ -239,6 +248,10 @@ const Piano = () => {
         <button id="tutorialBtn" onClick={stopTutorial}>
           End Testing Memory
         </button>
+        <button onClick={showHint}>Need a hint?</button>
+
+        <img id="hintImg" src={hint} alt="piano hint with numbers" />
+
         {congratulations}
       </div>
     </>

@@ -46,10 +46,13 @@ export default function About() {
           at any time.
         </p>
         <p>
-          <span>Honest Self-Assessment: </span>I had far less time to work on
-          this than I would have preferred. With a newborn at home, I was only
-          able to devote about an hour or so each day, but I think this can be a
-          good and fun idea, so I will continue to bring it to full realization.
+          <span>Honest Self-Assessment: </span>With a newborn at home and far
+          less time to work on this than I would have preferred, I'm happy with
+          what came out. I think this can be a good and fun idea, so I will
+          continue to bring it to full realization by implementing different
+          functionality so that it may leave more clearly in the "game" genre as
+          well as cleaner and more succinct code. Thank you for the challenge,
+          Mintbean!
         </p>
       </div>
       <div className="socialMedia">

@@ -219,3 +219,7 @@ button {
   border-radius: 37px;
   background-color: #ffffffeb;
 }
+#hintImg {
+  display: none;
+  width: 100%;
+}
