@@ -2,7 +2,7 @@
 
 ## Description:
 
-My goal was to make a game that tests the user's ability to strengthen their tonal and visual memory.
+My goal was to make a game that tests the user's ability to remember and playback different arrangements of pitches and also strengthen their tonal and visual memory.
 
 ## About
 
