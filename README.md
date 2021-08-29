@@ -35,14 +35,10 @@ From there, begin to play (by clicking) the melody on the piano. You be alerted 
 \*\*The game is tracking each note you click, so if you want to "wipe the slate clean" and start over, you can click "Reset" and then click "Begin Testing Your Memory" again to resume playing.
 ![PlayMelody](src/images/Reset.png)
 
-<<<<<<< HEAD
 Once you play the melody correctly, good job: try a more difficult melody!
 ![PlayMelody](src/images/Yay!-Move-on.png)
 
-\*\*Rhythm does not matter. If a melody has rhythm(s) in it when you listen to it, you do not need to replicate that rhythm to get the correct answer. You only need to playback the correct notes in correct order.
-=======
-![Play Melody](src/images/Play-Melody.png)
->>>>>>> 7154a3928259cc124d2f34bb2c113ca8f7936c9f
+\*Rhythm does not matter. If a melody has rhythm(s) in it when you listen to it, you do not need to replicate that rhythm to get the correct answer. You only need to playback the correct notes in correct order.
 
 ## **Technologies Used:**
 
