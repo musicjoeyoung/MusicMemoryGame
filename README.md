@@ -1,6 +1,6 @@
 # MusicMemoryGame
 
-![logo](src/images/Yay!-Move-on.png)
+![logo](src/images/mainLogo.png)
 
 ## Description:
 
