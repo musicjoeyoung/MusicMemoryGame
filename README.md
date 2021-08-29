@@ -1,5 +1,7 @@
 # MusicMemoryGame
 
+![logo](src/images/Yay!-Move-on.png)
+
 ## Description:
 
 My goal was to make a game that tests the user's ability to remember and playback different arrangements of pitches and also strengthen their tonal and visual memory.
@@ -23,20 +25,20 @@ Joe Young
 ## How to Play:
 
 To first hear (and see) the melody you'll need to try and remember, press "Play Melody." You can play it as many times as you wish.
-![PlayMelody](src/images/Play-Melody.png)
+![Play Melody](src/images/Play-Melody.png)
 
 (Then the melody will play!)
-![PlayMelody](src/images/Melody-is-played.png)
+![Melody is played ](src/images/Melody-is-played.png)
 
 Do your best to remember the melody and when you're ready, press "Begin Testing Your Memory!"
-![PlayMelody](src/images/Begin-Testing-Your-Memory.png)
+![Begin Testing Your Memiry](src/images/Begin-Testing-Your-Memory.png)
 
 From there, begin to play (by clicking) the melody on the piano. You be alerted if you play a wrong note.
 \*\*The game is tracking each note you click, so if you want to "wipe the slate clean" and start over, you can click "Reset" and then click "Begin Testing Your Memory" again to resume playing.
-![PlayMelody](src/images/Reset.png)
+![Reset](src/images/Reset.png)
 
 Once you play the melody correctly, good job: try a more difficult melody!
-![PlayMelody](src/images/Yay!-Move-on.png)
+![Move on](src/images/Yay!-Move-on.png)
 
 \*Rhythm does not matter. If a melody has rhythm(s) in it when you listen to it, you do not need to replicate that rhythm to get the correct answer. You only need to playback the correct notes in correct order.
 
