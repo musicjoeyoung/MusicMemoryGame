@@ -28,7 +28,7 @@ From there, begin to play (by clicking) the melody on the piano. You be alerted 
 When you're finished entering the melody, just click "Reset"
 \*\*Rhythm does not matter. If a melody has rhythm(s) in it when you listen to it, you do not need to replicate that rhythm to get the correct answer. You only need to playback the correct notes in correct order.
 
-![PlayMelody](/images/Play-Melody.png)
+![PlayMelody](Play-Melody.png)
 
 ## **Technologies Used:**
 
