@@ -232,3 +232,7 @@ button {
 #howToPlay {
   text-align: left;
 }
+#scrollDown {
+  position: relative;
+  top: 456px;
+}
