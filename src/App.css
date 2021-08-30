@@ -151,15 +151,15 @@ button {
 }
 
 .modal-area {
-  position: relative;
+  /* position: relative; */
   top: 10%;
   margin: auto;
   width: 70%;
   height: 100%;
   padding: 2.5em 1.5em 1.5em 1.5em;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   -webkit-overflow-scrolling: touch;
-  box-shadow: 10px 10px 8px 8px #000000;
+  /* box-shadow: 10px 10px 8px 8px #000000; */
   animation: fadeIn cubic-bezier(0.4, 0, 1, 1) 2s;
   animation-fill-mode: forwards;
   max-height: calc(100vh - 210px);
