@@ -24,7 +24,7 @@ Joe Young
 
 ## How to Play:
 
-To first hear (and see) the melody you'll need to try and remember, press "Play Melody." You can play it as many times as you wish.
+To first hear (and see) the melody that you'll need to try and remember, press "Play Melody." You can play it as many times as you wish.
 ![Play Melody](src/images/Play-Melody.png)
 
 (Then the melody will play!)
@@ -33,14 +33,14 @@ To first hear (and see) the melody you'll need to try and remember, press "Play 
 Do your best to remember the melody and when you're ready, press "Begin Testing Your Memory!"
 ![Begin Testing Your Memiry](src/images/Begin-Testing-Your-Memory.png)
 
-From there, begin to play (by clicking) the melody on the piano. You be alerted if you play a wrong note.
+From there, begin to play (by clicking) the melody on the piano. You will be alerted if you play a wrong note.
 \*\*The game is tracking each note you click, so if you want to "wipe the slate clean" and start over, you can click "Reset" and then click "Begin Testing Your Memory" again to resume playing.
 ![Reset](src/images/Reset.png)
 
 Once you play the melody correctly, good job: try a more difficult melody!
 ![Move on](src/images/Yay!-Move-on.png)
 
-\*Rhythm does not matter. If a melody has rhythm(s) in it when you listen to it, you do not need to replicate that rhythm to get the correct answer. You only need to playback the correct notes in correct order.
+\*Rhythm does not matter. If a melody has rhythm(s) in it when you listen to it, you do not need to replicate that rhythm to get the correct answer. You only need to playback the correct notes in the correct order.
 
 ## **Technologies Used:**
 

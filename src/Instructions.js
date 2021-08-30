@@ -6,17 +6,17 @@ export default function Instructions() {
       <h2 id="instructionsTitle">Instructions</h2>
       <div className="instructionText">
         <p id="goal">
-          <span>Goal: </span>The goal is to get playback, from memory, the
-          melody that is played. The melodies will become increasingly more
-          difficult to remember as they will include more notes and will be
-          played at faster tempos.
+          <span>Goal: </span>The goal is to playback, from memory, the melody
+          that is played. The melodies will become increasingly more difficult
+          to remember as they will include more notes and will be played at
+          faster tempos.
         </p>
         <p id="howToPlay">
-          <span>How to Play: </span>To first hear (and see) the melody you'll
-          need to try and remember, press "Play Melody." You can play it as many
-          times as you wish. (Then the melody will play!) Do your best to
-          remember the melody and when you're ready, press "Begin Testing Your
-          Memory!"
+          <span>How to Play: </span>To first hear (and see) the melody that
+          you'll need to try and remember, press "Play Melody." You can play it
+          as many times as you wish. (Then the melody will play!) Do your best
+          to remember the melody and when you're ready, press "Begin Testing
+          Your Memory!"
           <br />
           <br />
           From there, begin to play <i>(by clicking)</i> the melody on the
@@ -37,17 +37,8 @@ export default function Instructions() {
           <i>
             **Rhythm does not matter. If a melody has rhythm(s) when you listen
             to it, you do not need to replicate that rhythm to get the correct
-            answer. You only need to playback the correct notes in correct
+            answer. You only need to playback the correct notes in the correct
             order.
-          </i>
-          When you're finished entering the melody, just click "Reset"
-          <br />
-          <br />
-          <i>
-            **Rhythm does not matter. If a melody has rhythm(s) in it when you
-            listen to it, you do not need to replicate that rhythm to get the
-            correct answer. You only need to playback the correct notes in
-            correct order.
           </i>
           <br />
           <br />
