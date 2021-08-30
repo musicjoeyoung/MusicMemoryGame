@@ -13,6 +13,7 @@ export class ModalContent extends Component {
         onClick={this.props.onClickOutside}
         onKeyDown={this.props.onKeyDown}
       >
+        <div className="modal-body">{this.props.content}</div>
         <div className="modal-area" ref={this.props.modalRef}>
           <button
             ref={this.props.buttonRef}
@@ -28,7 +29,6 @@ export class ModalContent extends Component {
               <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
             </svg>
           </button>
-          <div className="modal-body">{this.props.content}</div>
         </div>
       </aside>,
       document.body

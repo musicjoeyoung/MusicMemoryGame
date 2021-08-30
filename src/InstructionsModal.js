@@ -13,9 +13,7 @@ export class InstructionsModal extends Component {
   ); //
   render() {
     return (
-      <>
-        <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
-      </>
+      <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
     );
   }
 }
