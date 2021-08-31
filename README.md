@@ -49,6 +49,13 @@ Once you play the melody correctly, good job: try a more difficult melody!
 - React JS Framework
 - Tone.js
 
+## **Installation Instructions:**
+
+- Clone and download the project
+- cd into the project
+- use `npm install` to install the react app
+- use `npm start` to start the project
+
 ## Goals:
 
 Right now there isn't true "win/lose" conditions,but rather "good job/wrong answer" conditions. I plan on adding the functionality that keeps track of wrong guesses, apply a limit to them (before the user has to start over), and keep track of how many melodies they got right or wrong.
