@@ -18,6 +18,8 @@ Joe Young
 
 **LinkedIn:** https://www.linkedin.com/in/joseph-m-young
 
+**Medium Article:** https://musicjoeyoung.medium.com/music-memory-game-4238a4bb1c35
+
 **Built**: During a Mintbean Hackathon
 
 **Duration of Creation:** 1 week
