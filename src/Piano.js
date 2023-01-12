@@ -6,6 +6,9 @@ import { useHistory } from "react-router";
 import Navbar from "./Navbar";
 import { melody1 } from "./piano.fn";
 
+//https://replit.com/@musicjoeyoung/RandomSetRangeGenerator#index.js
+//Look at this number generator to possibly utilize for randomly generating notes to use.
+
 import {
   playNote as pianoPlayNote,
   keyE3Yellow,
@@ -113,9 +116,6 @@ const Piano = () => {
     }
   }
 
-  //this will be what is compared against what the user enters
-  let melody1notes = ["E3", "D3", "C3"];
-
   const keys = [
     { note: "C2", color: "white" },
     { note: "Db2", color: "black" },
@@ -154,6 +154,38 @@ const Piano = () => {
     { note: "Bb4", color: "black" },
     { note: "B4", color: "white" },
   ];
+
+  /*   const noteNames = [
+    "E3",
+    "D3",
+    "C3",
+    "E2",
+    "D2",
+    "C2",
+    "E4",
+    "D4",
+    "C4",
+    "E5",
+    "D5",
+    "C5",
+  ]; */
+  //this will be what is compared against what the user enters
+  let melody1notes = ["E3", "D3", "C3"];
+  /*   function getRandomSubarray(arr, size) {
+    let shuffled = arr.slice(0),
+      i = arr.length,
+      temp,
+      index;
+    while (i--) {
+      index = Math.floor((i + 1) * Math.random());
+      temp = shuffled[index];
+      shuffled[index] = shuffled[i];
+      shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
+  }
+  const fiveRandomMembers = getRandomSubarray(noteNames, 5);
+  const melody1notes = fiveRandomMembers; */
 
   const keyboard = keys.map(({ note, color, className }) => (
     <div
